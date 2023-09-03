@@ -1,2 +1,5 @@
 #!/bin/bash
-chmod olleh hello
+filename_hello="hello"
+filename_olleh="olleh"
+olleh_mode=$(stat -c "%a" "$filename_olleh")
+chmod "$olleh_mode" "$filename_hello"
